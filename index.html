@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Note: I recognize that some of the lements on this page can be moved to the CSS document but with many items, it was easier to work them together here e.g. choosing background color or sizing images.-->
+
+<!--html for the Home Page CS290 Project - mcwalteg-->
+
+<head>
+  <meta charset="utf-8">
+  <title>CS 290 Project mcwalteg</title>
+  <link rel="stylesheet" href="CS290Project_mcwalteg.css">
+</head>
+
+<body>
+  <!--Install a navigation bar at top of home page <cite>How TO - Top Navigation W3Schools.com</cite>
+  and for drop down elements<cite>CSS/HTML:How to add a dropdown menu to an existing navbar? Stack
+    Overflow</cite>-->
+
+  <div class="topnav">
+    <a class="active" href="#home">&nbsp Home &nbsp </a>
+    <a href="interest.html"> &nbsp By Type of Interest &nbsp </a>
+    <a href="evolution.html"> &nbsp Evolution &nbsp</a>
+    <div class="dropdown">
+      <button class="dropbtn"> By Continent &nbsp
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Asia.html">Asia</a>
+        <a href="Europe.html">Europe</a>
+        <a href="SAmerica.html">S America</a>
+        <a href="NAmerica.html">N America</a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!--create the carousel on the home page. Create the container,
+  put child divs for each image, and then put image into child. Credit to <cite>How TO - Slideshow
+    W3SChools.com</cite> for basic outline. Further modified using <cite>How to Build a Carousel with Automatic and Manual Controls by
+    Matthew Croak at betterprogramming.pub</cite>
+  and from <cite>Creating a Custom Image Slider Geeks for Geeks</cite>-->
+  <div class="slider-container">
+    <div class="slider-insides">
+      <div class="opening slides">
+        <img src="https://swmedia-4cd6.kxcdn.com/media/catalogue/China,-Peoples-Rep./Postage-stamps/FAN-s.jpg"
+          style="width:500px; height:277px">
+        <div class="text">Shangri-La, Yunnan Province &nbsp &nbsp &nbsp StampWorld.com</div>
+      </div>
+      <div class="opening slides">
+        <img src="https://swmedia-4cd6.kxcdn.com/media/catalogue/Faroe-Islands/Postage-stamps/ACX-s.jpg"
+          style="width:500px; height:277px">
+        <div class="text">Lighthouse: Faroe Is. &nbsp &nbsp &nbsp StampWorld.com</div>
+      </div>
+      <div class="opening slides">
+        <img src="https://swmedia-4cd6.kxcdn.com/media/catalogue/United-States/Postage-stamps/HWC-s.jpg"
+          style="width:500px; height:277px">
+        <div class="text">Nebraska Sunset &nbsp &nbsp &nbsp StampWorld.com</div>
+      </div>
+      <div class="opening slides">
+        <img src="https://swmedia-4cd6.kxcdn.com/media/catalogue/South-Africa/Postage-stamps/AFZ-s.jpg"
+          style="width:500px; height:277px">
+        <div class="text">South Africa: Rhinoceros & Baby &nbsp &nbsp StampWorld.com</div>
+      </div>
+      <div class="opening slides">
+        <img src="https://swmedia-4cd6.kxcdn.com/media/catalogue/New-Caledonia/Postage-stamps/BBA-s.jpg"
+          style="width:500px; height:277px">
+        <div class="text">New Caledonia:Cultural Center &nbsp &nbsp StampWorld.com</div>
+      </div>
+      <div class="opening slides">
+        <img src="https://swmedia-4cd6.kxcdn.com/media/catalogue/Russia/Postage-stamps/BFK-s.jpg"
+          style="width:500px; height:277px">
+        <div class="text">Curonian Spit:Russia &nbsp &nbsp &nbsp StampWorld.com</div>
+      </div>
+      <!--Add buttons for left and right movement-->
+      <a class="last" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
+
+    <!--Create a message box to be placed to the right of the image scroller. While most image
+    scrollers on line use the full page width, doing so with stamps greatly distorts the image. Thus the container was designed to hold two boxes: one for the image slider and one for the message-->
+
+    <div class="message">
+      <h1>Philatourism</h1>
+      <p>Did you know that during 2020, stamp collecting saw a <b>resurgence</b>?<br><br>
+        Given the inability to travel or to socialize normally, it makes sense that people
+        confined indoors would pick up new or rediscover old hobbies. But why stamp
+        collecting?
+        For some, it was dusting off an old collection. For others it was a way to introduce
+        children to a new hobby. Whatever the reason, membership in stamp clubs started to grow
+        again and stamp prices at auctions saw a measurable increase.<br><br>
+        Whatever the reason, when travel is impossible, stamp collecting is another way to "visit"
+        new countries.
+        This site shows examples of the beauty and culture of countries around the world.
+      </p>
+
+    </div>
+  </div>
+  <div style="left: 300px;">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+    <span class="dots" onclick="currentSlide(4)"></span>
+    <span class="dots" onclick="currentSlide(5)"></span>
+    <span class="dots" onclick="currentSlide(6)"></span>
+  </div>
+
+  <!--Create a master container("boxes") to hold 3 boxes which demonstrate a form submission, connection to web pages and and download for more information.-->
+
+  <div id="boxes">
+
+    <!--Create a form to submit name and email address-->
+    <div id="leftbox">
+      <form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php"
+        method="get" style="background-color: lightskyblue;">
+        <fieldset style="background-color: lightskyblue;">
+          <Legend style="background-color: lightskyblue;">Enter to win!</Legend><br>
+          <label style="background-color: lightskyblue;">3 lucky people will win 1000
+            global stamps! Drawing August 25,
+            2021.<br></label>
+          <br>
+          <label style="background-color: lightskyblue;">Enter your name:
+            <input type="text2" name="username" , size="30" , maxlength="100">
+          </label>
+          <br>
+          <label style="background-color: lightskyblue;">Enter email:
+            <input type="email" name="email" , size="30" , maxlength="150">
+          </label>
+          <input type="submit" value="submit" style="background-color: lightgreen" />
+        </fieldset>
+      </form>
+    </div>
+
+    <!--Create a middle box with relevant web links-->
+    <div id="middlebox">
+      <h2>For more information...</h2>
+      <ul>
+        <li><a href="https://stamps.org/"> American Philatelic Society</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Philately"> Wikipedia</a></li>
+        <li><a href="https://postalmuseum.si.edu/exhibition/about-philately">Smithsonian Postal Museum</a></li>
+        <li><a href="https://www.stampworld.com/en/maps/Europe/"> Stamp World</a></li>
+        <li><a href="http://www.learnaboutstamps.com">Learn about stamps</a></li>
+      </ul>
+    </div>
+
+    <!--The right box demonsrates the download option. Sredit to <cite>How to Trigger a File download
+      when clicking an HTML download button or Javascript. Geeks for Geeks</cite>
+    and also <cite> How TO - Download Button W3Schools.com</cite>-->
+    <div id="rightbox">
+      <h2>Terminology</h2>
+      Download this explanation of common philatelic terms &nbsp
+      <br>
+      <a href="Presentation1.pdf" download="logo"><br>
+        <button class="btn"><i class="fa fa-download"></i>Download</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="CS290Project_mcwalteg.js"></script>
+</body>
+
+</html>
